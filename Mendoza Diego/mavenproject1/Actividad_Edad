@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        
+    //Solicitar los datos al usuario
+    System.out.println("Cual es tu nombre?: ");
+    String nombre = sc.nextLine();
+    System.out.println("Cual es tu año de nacimiento?: ");
+    int anio = sc.nextInt();
+    System.out.println("Cual es el año actual?: ");
+    int anioAct = sc.nextInt(); 
+    
+    //Crear obbjeto Persona y mostrar los resultados
+    Persona persona = new Persona ( nombre, anio, anioAct);
+    persona.mostrarRes();
+    sc.close();
+    }
+}
+
+class Persona{
+    private String nombre;
+    private int anio;
+    private int anioAct;
+    //Creamos el constructor general
+    public Persona (String nombre, int anio, int anioAct) {
+    this.nombre=nombre;
+    this.anio=anio;
+    this.anioAct=anioAct;
+    }
+    //Metodo para calcular la edad 
+    public int calcular() {
+        return anioAct-anio ;
+    }
+    // Metodo para saber si es mayor o no
+    public boolean siEsMayor(){
+        return calcular() >= 18;
+    }
+    
+    public void mostrarRes(){
+        System.out.println("Su edad es: "+ calcular()) ;
+        int edad = calcular() ;
+        if(siEsMayor()) {
+            System.out.println("Es mayor de edad");
+            }
+            else {
+            System.out.println("Es menor de edad") ;
+        }
+
+    }
+}
