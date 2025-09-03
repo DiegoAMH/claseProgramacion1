@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+class Parcial {
+    public static void main(String[] args) {
+    //Crear obbjeto Celular y mostrar info
+     Celular celular1 = new Celular ( "Iphone", "13 Pro Max", 3500000);
+    celular1.mostrarRes();
+        //Crear obbjeto Restaurante y abrir
+     Restaurante restaurante1 = new Restaurante ( "La pelona", "Cll 138 # 149 " );
+    restaurante1.abrir();
+    }
+}
+
+class Celular{
+    private String marca;
+    private String modelo;
+    private int precio;
+    //Creamos el constructor general
+    public Celular (String marca, String modelo, int precio) {
+    this.marca= marca;
+    this.modelo= modelo;
+    this.precio= precio;
+    }
+    //Metodo para mostrar informacion
+    public void mostrarRes(){
+        System.out.println( marca + " " + modelo + " - $"+ precio) ;
+
+        
+    }
+}
+class Restaurante{
+    private String nombre;
+    private String direccion;
+    
+    //Creamos el constructor general
+    public Restaurante (String nombre, String direccion) {
+    this.nombre=nombre;
+    this.direccion=direccion;
+
+    }
+    //Metodo para abrir
+    public void abrir(){
+        System.out.println( "El restaurante " + nombre +" esta abierto en " + direccion) ;
+
+        
+    }
+}
+class CuentaCorriente{
+    private String titular;
+    private int saldo;
+    
+    //Creamos el constructor general
+    public Restaurante (String titular, int saldo) {
+    this.titular=titular;
+    this.saldo=saldo;
+
+    }
+    //Metodo para deposito
+    public void abrir(){
+        System.out.println( "El restaurante " + nombre +" esta abierto en " + direccion) ;
+    }
+        //Metodo para retirar
+    public void abrir(){
+        System.out.println( "El restaurante " + nombre +" esta abierto en " + direccion) ;
+    }
+        //Metodo para mostrarSaldo
+    public void abrir(){
+        System.out.println( "El restaurante " + nombre +" esta abierto en " + direccion) ;
+    }
+}   
+
